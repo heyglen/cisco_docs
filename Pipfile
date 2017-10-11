@@ -1,0 +1,17 @@
+[[source]]
+url = "https://pypi.python.org/simple"
+verify_ssl = true
+name = "pypi"
+
+[dev-packages]
+
+ipdb = "*"
+ipython = "*"
+"e1839a8" = {editable = true, path = "."}
+
+
+[packages]
+
+"beautifulsoup4" = "*"
+requests = "*"
+"e1839a8" = {editable = true, path = "."}
