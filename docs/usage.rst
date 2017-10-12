@@ -2,6 +2,6 @@
 Usage
 =====
 
-To use cisco_doc_parser in a project::
+To use cisco_doc in a project::
 
-    import cisco_doc_parser
+    import cisco_doc

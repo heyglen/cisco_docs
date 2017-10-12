@@ -6,6 +6,8 @@ REQUIRED = [
     'colorlog',
     'appdirs',
     'pyyaml',
+    'requests',
+    'beautifulsoup4',
     'Click>=6.0',
 ]
 
@@ -20,26 +22,26 @@ test_requirements = [
 ]
 
 setup(
-    name='cisco_doc_parser',
+    name='cisco_doc',
     version='0.1.0',
     description="Cisco Documentation Parser",
     long_description=readme + '\n\n' + history,
     author="Glen Harmon",
     author_email='glencharmon@gmail.com',
-    url='https://github.com/heyglen/cisco_doc_parser',
+    url='https://github.com/heyglen/cisco_doc',
     packages=find_packages(exclude=['contrib', u'docs', u'tests']),
-    package_dir={'cisco_doc_parser':
-                 'cisco_doc_parser'},
+    package_dir={'cisco_doc':
+                 'cisco_doc'},
     entry_points={
         'console_scripts': [
-            'cdocs=cisco_doc_parser.cli:commands'
+            'cdocs=cisco_doc.cli:commands'
         ]
     },
     include_package_data=True,
     install_requires=REQUIRED,
     license="MIT license",
     zip_safe=False,
-    keywords='cisco_doc_parser',
+    keywords='cisco_doc',
     classifiers=[
         'Development Status :: 2 - Pre-Alpha',
         'Intended Audience :: Developers',

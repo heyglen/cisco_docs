@@ -1,4 +1,4 @@
-Welcome to cisco_doc_parser's documentation!
+Welcome to cisco_doc's documentation!
 ======================================
 
 Contents:

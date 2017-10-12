@@ -76,7 +76,7 @@ if configuration_directory.is_dir():
 
 environment_variables = _clean_config({
     'log': {
-        'level': _get_env('CISCO_DOC_PARSER_LOG_LEVEL'),
+        'level': _get_env('cisco_doc_LOG_LEVEL'),
     },
 })
 

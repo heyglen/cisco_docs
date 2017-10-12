@@ -1,5 +1,5 @@
 
-from cisco_doc_parser.utilities.dot_dict import DotDict
+from cisco_doc.utilities.dot_dict import DotDict
 
 location = DotDict({
     'index': {

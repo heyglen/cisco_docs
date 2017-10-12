@@ -1,5 +1,5 @@
 ===============================
-cisco_doc_parser
+cisco_doc
 ===============================
 
 Cisco Documentation Parser

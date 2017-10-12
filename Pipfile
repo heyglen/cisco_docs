@@ -8,10 +8,11 @@ name = "pypi"
 ipdb = "*"
 ipython = "*"
 "e1839a8" = {editable = true, path = "."}
+matplotlib = "*"
 
 
 [packages]
 
 "beautifulsoup4" = "*"
 requests = "*"
-"e1839a8" = {editable = true, path = "."}
+"e1839a8" = {path = ".", editable = true}

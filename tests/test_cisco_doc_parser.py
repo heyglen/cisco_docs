@@ -2,10 +2,10 @@
 # -*- coding: utf-8 -*-
 
 """
-test_cisco_doc_parser
+test_cisco_doc
 ----------------------------------
 
-Tests for `cisco_doc_parser` module.
+Tests for `cisco_doc` module.
 """
 
 import pytest
@@ -13,8 +13,8 @@ import pytest
 from contextlib import contextmanager
 from click.testing import CliRunner
 
-from cisco_doc_parser import cisco_doc_parser
-from cisco_doc_parser import cli
+from cisco_doc import cisco_doc
+from cisco_doc import cli
 
 
 @pytest.fixture
@@ -35,7 +35,7 @@ def test_command_line_interface():
     runner = CliRunner()
     result = runner.invoke(cli.main)
     assert result.exit_code == 0
-    assert 'cisco_doc_parser.cli.main' in result.output
+    assert 'cisco_doc.cli.main' in result.output
     help_result = runner.invoke(cli.main, ['--help'])
     assert help_result.exit_code == 0
     assert '--help  Show this message and exit.' in help_result.output

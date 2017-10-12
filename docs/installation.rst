@@ -8,13 +8,13 @@ Installation
 Stable release
 --------------
 
-To install cisco_doc_parser, run this command in your terminal:
+To install cisco_doc, run this command in your terminal:
 
 .. code-block:: console
 
-    $ pip install cisco_doc_parser
+    $ pip install cisco_doc
 
-This is the preferred method to install cisco_doc_parser, as it will always install the most recent stable release. 
+This is the preferred method to install cisco_doc, as it will always install the most recent stable release.
 
 If you don't have `pip`_ installed, this `Python installation guide`_ can guide
 you through the process.
@@ -26,19 +26,19 @@ you through the process.
 From sources
 ------------
 
-The sources for cisco_doc_parser can be downloaded from the `Github repo`_.
+The sources for cisco_doc can be downloaded from the `Github repo`_.
 
 You can either clone the public repository:
 
 .. code-block:: console
 
-    $ git clone git://github.com/heyglen/cisco_doc_parser
+    $ git clone git://github.com/heyglen/cisco_doc
 
 Or download the `tarball`_:
 
 .. code-block:: console
 
-    $ curl  -OL https://github.com/heyglen/cisco_doc_parser/tarball/master
+    $ curl  -OL https://github.com/heyglen/cisco_doc/tarball/master
 
 Once you have a copy of the source, you can install it with:
 
@@ -47,5 +47,5 @@ Once you have a copy of the source, you can install it with:
     $ python setup.py install
 
 
-.. _Github repo: https://github.com/heyglen/cisco_doc_parser
-.. _tarball: https://github.com/heyglen/cisco_doc_parser/tarball/master
+.. _Github repo: https://github.com/heyglen/cisco_doc
+.. _tarball: https://github.com/heyglen/cisco_doc/tarball/master

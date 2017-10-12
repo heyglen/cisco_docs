@@ -1,9 +1,10 @@
 
-from cisco_doc_parser.utilities.dot_dict import DotDict
+from cisco_doc.utilities.dot_dict import DotDict
 
 
 parser = DotDict({
     'nxos': {
+        'anchor_prefix' : 'pgfId-',
         'command': {
             'syntax' : {
                 'element': 'p',

@@ -4,11 +4,9 @@ from urllib.parse import urlparse
 import requests
 import bs4
 
-from cisco_doc_parser.locations import location
-from cisco_doc_parser.parser_settings import parser
-from cisco_doc_parser.command import Command
-from cisco_doc_parser.utilities.log_setup import log_setup
-from cisco_doc_parser.syntax.factory import SyntaxFactory
+from cisco_doc.locations import location
+from cisco_doc.command.factory import CommandFactory
+from cisco_doc.utilities.log_setup import log_setup
 
 logger = log_setup('cisco_cmd')
 logger.setLevel(logging.DEBUG)
@@ -41,31 +39,7 @@ class Docs:
                     continue
                 h2 = section.find('h2')
                 if h2 and 'pCRC_CmdRefCommand' in h2['class']:
-                    yield cls._parse_command_section(section)
-
-    @classmethod
-    def _parse_command_section(cls, section):
-        command = Command()
-        for tag in section.h2.children:
-            if isinstance(tag, bs4.element.NavigableString):
-                command.name = tag
-                break
-        command.description = section.find(
-            parser.nxos.command.description.element,
-            class_=parser.nxos.command.description.class_
-        ).contents
-
-        all_syntax = section.find_all(
-            parser.nxos.command.syntax.element,
-            class_=parser.nxos.command.syntax.class_
-        )
-        for syntax in all_syntax:
-            import ipdb; ipdb.set_trace()
-            command.syntax.append(
-                SyntaxFactory.build(syntax.contents)
-            )
-        logger.debug(f'Command {command}')
-        return command
+                    yield CommandFactory.build(section)
 
     @classmethod
     def download(cls):
