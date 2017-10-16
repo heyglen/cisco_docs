@@ -8,7 +8,7 @@ from cisco_doc.locations import location
 from cisco_doc.command.factory import CommandFactory
 from cisco_doc.utilities.log_setup import log_setup
 
-logger = log_setup('cisco_cmd')
+logger = log_setup('cisco_doc')
 logger.setLevel(logging.DEBUG)
 
 
@@ -44,4 +44,4 @@ class Docs:
     @classmethod
     def download(cls):
         for cmd in cls._commands():
-            import ipdb; ipdb.set_trace()
+            yield cmd

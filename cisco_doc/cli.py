@@ -13,4 +13,5 @@ commands = click.Group('cisco_doc', context_settings=CONTEXT_SETTINGS, no_args_i
 @commands.command()
 @click.pass_context
 def main(ctx):
-    Docs.download()
+    for cmd in Docs.download():
+        pass

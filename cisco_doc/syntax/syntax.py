@@ -1,0 +1,4 @@
+
+
+class Syntax(list):
+    pass

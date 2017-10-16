@@ -14,6 +14,18 @@ parser = DotDict({
                 'element': 'p',
                 'class_': 'pB1_Body1',
             },
+            'keyword': {
+                'classes': [
+                    'cCN_CmdName',
+                    'cKeyword',
+                ],
+            },
+            'argument': {
+                'classes': [
+                    'cArgument',
+                    'cCi_CmdItalic',
+                ],
+            },
         },
     },
 })

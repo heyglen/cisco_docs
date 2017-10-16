@@ -1,10 +1,15 @@
 
+import logging
+
 import bs4
 
 from cisco_doc.parser_settings import parser
 from cisco_doc.command.command import Command
 from cisco_doc.syntax.factory import SyntaxFactory
 from cisco_doc.base_factory import BaseFactory
+
+logger = logging.getLogger(__name__)
+
 
 class CommandFactory(BaseFactory):
 
@@ -25,9 +30,9 @@ class CommandFactory(BaseFactory):
                 break
 
         command.description = cls._get_description(section)
-        command.syntax = SyntaxFactory.build(section)
-
-        import ipdb; ipdb.set_trace()
-
+        syntax = SyntaxFactory.build(section)
+        command.syntax = syntax
         logger.debug(f'Command {command}')
+        for cmd in syntax:
+            logger.debug(f'Syntax: {cmd}')
         return command
