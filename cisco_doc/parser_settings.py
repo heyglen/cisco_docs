@@ -18,11 +18,13 @@ parser = DotDict({
                 'classes': [
                     'cCN_CmdName',
                     'cKeyword',
+                    'cBold',
                 ],
             },
             'argument': {
                 'classes': [
                     'cArgument',
+                    'cEmphasis',
                     'cCi_CmdItalic',
                 ],
             },

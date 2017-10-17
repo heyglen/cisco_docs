@@ -32,7 +32,7 @@ class CommandFactory(BaseFactory):
         command.description = cls._get_description(section)
         syntax = SyntaxFactory.build(section)
         command.syntax = syntax
-        logger.debug(f'Command {command}')
-        for cmd in syntax:
-            logger.debug(f'Syntax: {cmd}')
+        # logger.debug(f'Command {command}')
+        # for cmd in syntax:
+        #     logger.debug(f'Syntax: {cmd}')
         return command
